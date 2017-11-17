@@ -1,3 +1,10 @@
+*   Make `ActiveSupport::TimeZone.all` return only time zones that are in
+    `ActiveSupport::TimeZone::MAPPING`.
+
+    Fixes #7245.
+
+    *Chris LaRose*
+
 *   Handle `TZInfo::AmbiguousTime` errors
 
     Make `ActiveSupport::TimeWithZone` match Ruby's handling of ambiguous
