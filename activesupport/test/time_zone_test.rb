@@ -9,9 +9,7 @@ class TimeZoneTest < ActiveSupport::TestCase
   include TimeZoneTestHelpers
 
   def setup
-    # Clear memoized time zone data on TimeZone class
-    ActiveSupport.send(:remove_const, :TimeZone) if ActiveSupport.const_defined?(:TimeZone)
-    load "active_support/values/time_zone.rb"
+    ActiveSupport::TimeZone.clear
   end
 
   def test_utc_to_local
